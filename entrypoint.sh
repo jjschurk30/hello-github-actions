@@ -1,3 +1,8 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
 
-sh -c "echo Hello world my name is $INPUT_MY_NAME"
+docker-compose run drop-test-db
+docker-compose run initialize-test-db
+docker-compose run patch-test-db
+
+docker-compose build test
+docker-compose run test

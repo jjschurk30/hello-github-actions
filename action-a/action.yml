@@ -1,0 +1,10 @@
+name: "Hello Actions"
+description: "Greet someone"
+author: "octocat@github.com"
+
+
+runs:
+  using: [docker node12]
+  steps:
+    - run: sh ./entrypoint.sh
+      shell: bash

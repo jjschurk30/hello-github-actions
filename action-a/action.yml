@@ -6,5 +6,5 @@ author: "octocat@github.com"
 runs:
   using: [docker node12]
   steps:
-    - run: sh ./entrypoint.sh
+    - run: /entrypoint.sh
       shell: bash
